@@ -1,0 +1,23 @@
+
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "6565:6565"
+    volumes:
+      - ./backend:/app
+    environment:
+      - UVICORN_RELOAD=true
+    command: uvicorn main:app --host 0.0.0.0 --port 6565 --reload
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3333:3000"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    environment:
+      - CHOKIDAR_USEPOLLING=true

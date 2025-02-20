@@ -1,0 +1,26 @@
+{
+    "std_dev": {
+        "name": "Standard Deviation",
+        "fields": [
+            { "name": "dataset", "label": "Upload Dataset (CSV)", "type": "file", "required": false },
+            { "name": "input1", "label": "First Input", "type": "number", "placeholder": "Enter value", "required": true }
+        ],
+        "endpoint": "/api/std_dev"
+    },
+    "geo_mean": {
+        "name": "Geometric Mean",
+        "fields": [
+            { "name": "dataset", "label": "Upload Dataset (CSV)", "type": "file", "required": false },
+            { "name": "values", "label": "Enter Numbers", "type": "text", "placeholder": "Comma-separated values", "required": true }
+        ],
+        "endpoint": "/api/geo_mean"
+    },
+    "odds_for_e": {
+        "name": "Odds for E",
+        "fields": [
+            { "name": "eventA", "label": "Event A Probability", "type": "number", "placeholder": "0.5", "required": true },
+            { "name": "eventB", "label": "Event B Probability", "type": "number", "placeholder": "0.5", "required": true }
+        ],
+        "endpoint": "/api/odds_for_e"
+    }
+}

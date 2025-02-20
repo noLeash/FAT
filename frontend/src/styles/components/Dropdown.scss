@@ -1,0 +1,6 @@
+@use "@/styles/variables" as vars;
+
+.dropdown {
+    background-color: aqua;
+    margin: vars.$padding;
+}

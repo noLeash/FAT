@@ -1,0 +1,12 @@
+@use "@/styles/variables" as vars;
+
+.methodbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+  &__container {
+    background-color: aqua;
+  }
+}

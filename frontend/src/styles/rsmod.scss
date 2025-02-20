@@ -1,0 +1,17 @@
+@use "@/styles/variables" as vars;
+
+.rs-dropdown {
+    // background: #44a915;
+    // border: 1px solid vars.$primary-color;
+    // border-radius: vars.$border-radius;
+    // padding: vars.$padding;
+    // width: 200px;
+    // box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+    &-toggle {
+        background-color: rgb(13, 163, 163) !important;
+    }
+
+
+}
+

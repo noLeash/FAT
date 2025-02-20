@@ -1,0 +1,25 @@
+@use "@/styles/variables" as vars;
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+h2 {
+  color: darken(vars.$primary-color, 10%);
+}
+
+
+.app {
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+
+
+  &-container {
+  background-color: beige;
+  margin: vars.$padding-small;
+
+  }
+}
