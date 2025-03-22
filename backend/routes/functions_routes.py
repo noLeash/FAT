@@ -8,44 +8,8 @@ from models.react_models import DropdownItem
 router = APIRouter()
 
 
-
-
-# Sample data for menu
-menu_data = [
-    DropdownItem(
-        id=1,
-        title="Item 1"
-    ),
-    DropdownItem(
-        id=2,
-        title="Item 2",
-        children=[
-            DropdownItem(
-                id=21,
-                title="Item 2-1",
-                children=[
-                    DropdownItem(id=211, title="Item 2-1-1"),
-                    DropdownItem(id=212, title="Item 2-1-2"),
-                    DropdownItem(id=213, title="Item 2-1-3")
-                ]
-            ),
-            DropdownItem(id=22, title="Item 2-2"),
-            DropdownItem(id=23, title="Item 2-3"),
-        ]
-    ),
-    DropdownItem(
-        id=3,
-        title="Item 3",
-        children=[
-            DropdownItem(id=31, title="Item 3-1"),
-            DropdownItem(id=32, title="Item 3-2"),
-        ]
-    )
-]
-
 # Load function dictionary from JSON file
-FUNCTIONS_FILE = Path("routes/function_dictionary.json")
-
+FUNCTIONS_FILE = Path("static/function_dictionary.json")
 
 # Recursive function to convert JSON to Pydantic models
 def parse_dropdown_items(data) -> List[DropdownItem]:
@@ -94,7 +58,28 @@ def load_functions():
         raise HTTPException(status_code=500, detail=f"Error loading function dictionary: {str(e)}")
 
 
+SCHEMA_FILE = Path("static/input_schemas.json")
 
+def load_schema() -> json:
+    print(f"load_schema() init")
+    try:
+        print(f"load_schema() init")
+        with open(SCHEMA_FILE, "r", encoding="utf-8") as file:
+            json_data = json.load(file)
+            # print(f"schema: {json_data}")
+            return json_data
+        
+    except json.JSONDecodeError as e:
+        print(f"Error loading schema JSON: {e}")
+        return []  # ✅ Return empty list on failure
+    
+    except FileNotFoundError:
+        print("Error: JSON schema file not found.")
+        return []  # ✅ Return empty list if file is missing
+        
+    except Exception as e:
+        print(f"Error: {e}")
+        raise HTTPException(status_code=500, detail=f"Error loading function dictionary: {str(e)}")
 
 
 

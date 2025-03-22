@@ -17,7 +17,7 @@ export const fetchSchema = async (method) => {
         });
 
         // Debugging: Log the received schema
-        console.log("Fetched schema:", response.data);
+        // console.log("Fetched schema:", response.data);
 
         // Ensure the response contains a valid schema
         if (!response.data || !response.data.fields) {

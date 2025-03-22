@@ -1,0 +1,152 @@
+{
+    "arithmetic_mean": {
+        "title": "Arithmetic Mean",
+        "description": "Calculate the arithmetic mean of a dataset.",
+        "method": "arithmetic_mean",
+        "fields": [
+            {"name": "numbers", "type": "array", "format": "float", "label": "Numbers"}
+        ],
+        "markdown": "mean_arithmetic.md"
+    },
+    "coefficient_of_variance": {
+        "title": "Coefficient of Variance",
+        "description": "Calculate the coefficient of variance.",
+        "method": "geo_mean",
+        "fields": [
+            {"name": "numbers", "type": "array", "format": "float", "label": "Numbers"}
+        ],
+        "markdown": "coefficient_variance.md"
+    },
+    "div_discount_model": {
+        "title": "Dividend Discount Model",
+        "description": "Price equity share based on dividend, expected growth, and required rate.",
+        "method": "div_discount_model",
+        "fields": [
+            {"name": "next_dividend", "type": "dollar", "format": "float", "label": "Next Dividend"},
+            {"name": "required_rate", "type": "pct", "format": "float", "label": "Required Rate"},
+            {"name": "growth_rate", "type": "pct", "format": "float", "label": "Growth Rate"}
+        ],
+        "markdown": "dividend_discount_model.md"
+    },
+    "effective_annual_rate": {
+        "title": "Effective Annual Rate (EAR)",
+        "description": "Calculates the yeild based on stated rate and number of compounding periods.",
+        "method": "effective_annual_rate",
+        "fields": [
+            {"name": "stated_rate", "type": "pct", "format": "float", "label": "Stated Rate"},
+            {"name": "compound_frequency", "type": "float", "format": "float", "label": "Compound Frequency (Monthly = 12)"}
+        ],
+        "markdown": "yield_effective_annual_rate.md"
+    },
+    "geometric_mean": {
+        "title": "Geometric Mean",
+        "description": "Calculate the geometric mean of a dataset.",
+        "method": "geometric_mean",
+        "fields": [
+            {"name": "list", "type": "array", "format": "float", "label": "Numbers"}
+        ],
+        "markdown": "mean_geometric.md"
+    },
+    "harmonic_mean": {
+        "title": "Harmonic Mean",
+        "description": "Gotta Figure this out",
+        "method": "harmoic_mean",
+        "fields": [],
+        "markdown": "v1_harmoic_mean.md"
+    },
+    "ibkr_holding_period_return": {
+        "title": "Holding Period Return",
+        "description": "(Data Source: IBKR)",
+        "method": "ibkr_holding_period_return",
+        "fields": [
+            {"name": "ticker_symbol", "type": "ticker_symbol", "format": "str", "label": "Ticker Symbol"}, 
+            {"name": "start_date", "type": "date", "format": "date", "label": "Start Date"},
+            {"name": "end_date", "type": "date", "format": "date", "label": "End Date"}
+        ],
+        "markdown": "ibkr_holding_period_return.md"
+    },
+    "implied_periodic_return": {
+        "title": "Implied Periodic Return",
+        "description": "Solve for the implied periodic return earned over the life of the instrument (t periods):",
+        "method": "implied_periodic_return",
+        "fields": [
+            {"name": "future_value", "type": "dollar", "format": "float", "label": "FV"},
+            {"name": "present_value", "type": "dollar", "format": "float", "label": "PV"},
+            {"name": "time", "type": "float", "format": "float", "label": "t"}
+        ],
+        "markdown": "implied_periodic_return.md"
+    },
+    "leveraged_returns": {
+        "title": "Leveraged Return",
+        "description": "Calculate the return on levered capital.",
+        "method": "leveraged_returns",
+        "fields": [
+            {"name": "purchase_price", "type": "float", "format": "float", "label": "Purchase Price"},
+            {"name": "borrowed", "type": "float", "format": "float", "label": "Amount Borrowed"},
+            {"name": "debt_rate", "type": "percent", "format": "percent", "label": "Debt Rate"},
+            {"name": "future_value", "type": "float", "format": "float", "label": "Future Value"}
+        ],
+        "markdown": "coefficient_variance.md"
+    },
+    "trimmed_mean": {
+        "title": "Trimmed Mean",
+        "description": "Removes Outliers.",
+        "method": "trimmed_mean",
+        "fields": [],
+        "markdown": "v1_trimmed_mean.md"
+    },
+    "tvm_implied_growth": {
+        "title": "Implied Growth",
+        "description": "TVM > Equity Instruments > Growth calculated on current price and dividend yeild",
+        "method": "tvm_implied_growth",
+        "fields": [
+            {"name": "current_price", "type": "float", "format": "float", "label": "Present Value (Equity)"},
+            {"name": "dividend_t1", "type": "float", "format": "float", "label": "Next Dividend"},
+            {"name": "expected_div_growth", "type": "float", "format": "float", "label": "Expected Dividend Growth"}
+        ],
+        "markdown": "tvm_implied_growth.md"
+    },
+    "tvm_implied_return": {
+        "title": "Implied Periodic Return",
+        "description": "** Need to add div payments - TVM > Equity Instruments > Return calculated on current price and dividend yeild",
+        "method": "tvm_implied_return",
+        "fields": [
+            {"name": "current_price", "type": "float", "format": "float", "label": "Present Value (Equity)"},
+            {"name": "dividend_t1", "type": "float", "format": "float", "label": "Next Dividend"},
+            {"name": "expected_div_growth", "type": "float", "format": "float", "label": "Expected Dividend Growth"}
+        ],
+        "markdown": "tvm_implied_return.md"
+    },
+    "v1_determinants_of_r": {
+        "title": "Determinants of Interest Rates",
+        "description": "Elements that compose the interest rate",
+        "method": "v1_determinants_of_r",
+        "fields": [],
+        "markdown": "v1_determinants_of_r.md"
+    },
+    "v1_nominal_risk_free_rate": {
+        "title": "Nominal Risk Free Rate",
+        "description": "Reflects the real risk free rate plus an inflation preimum",
+        "method": "v1_risk_free_rate",
+        "fields": [],
+        "markdown": "v1_risk_free_rate.md"
+    },
+    "winsorized_mean": {
+        "title": "Winsorized Mean",
+        "description": "Replaces detrmined outliers with the nearest observations",
+        "method": "winsorized_mean",
+        "fields": [],
+        "markdown": "v1_winsorized_mean.md"
+    },
+    "schema": {
+        "title": "Schema Test",
+        "description": "Schmea test description",
+        "method": "schema_method",
+        "fields": [
+            {"name": "schema float test", "type": "float", "format": "float", "label": "float_test"},
+            {"name": "coma sep list", "type": "array", "format": "float", "label": "pct_pair_test"},
+            {"name": "schema pair float/pct test", "type": "val_pct_pair", "format": ["float", "pct"], "label": "pct_pair_test"},
+            {"name": "schema pct test", "type": "pct", "format": "float", "label": "pct_pair_test"}
+        ]
+    }
+}

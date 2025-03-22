@@ -1,0 +1,92 @@
+[
+    {
+        "id": 0,
+        "type": "CFAI Sections",
+        "method": "None",
+        "children": [{ 
+            "id": 1,
+            "type": "Quantative Analysis (V1)",
+            "method": "none",
+            "children": [{ 
+                "id": 100,
+                "type": "Means",
+                "method": "None",
+                "children": [
+                    { "id": 1001, "type": "Geometric", "method": "geometric_mean"},
+                    { "id": 1002, "type": "Arthmetic", "method": "arithmetic_mean"}, 
+                    { "id": 1003, "type": "Harmonic", "method": "harmonic_mean"},
+                    { "id": 1004, "type": "Trimmed", "method": "trimmed_mean"},
+                    { "id": 1005, "type": "Winsorized", "method": "winsorized_mean"}
+                ]}, {
+                "id": 200,
+                "type": "Rates",
+                "method": "None",
+                "children": [
+                    { "id": 101, "type": "Determinants of Interest Rates", "method": "v1_determinants_of_r"},
+                    { "id": 102, "type": "Nominal Risk Free Rate", "method": "v1_risk_free_rate"}
+                ]}
+            ]
+                
+        }]
+    },
+    {
+        "id": 1,
+        "type": "Means",
+        "method": "None",
+        "children": [
+            { "id": 11, "type": "Geometric", "method": "geometric_mean"},
+            { "id": 12, "type": "Arthmetic", "method": "arithmetic_mean"}
+        ]
+    },
+    {
+        "id": 2,
+        "type": "Variance",
+        "method": "None",
+        "children": [
+            { "id": 21, "type": "Coefficent of Variance", "method": "geometric_mean"},
+            { "id": 22, "type": "Arthmetic", "method": "arithmetic_mean"}
+        ]
+    },
+    {
+        "id": 3,
+        "type": "Leverage",
+        "method": "None",
+        "children": [
+            { "id": 11, "type": "Leveraged Returns", "method": "leveraged_returns"}
+        ]
+    },
+    {
+        "id": 4,
+        "type": "TVM",
+        "method": "None",
+        "children": [
+            { "id": 41, "type": "Dividend Discount Model", "method": "div_discount_model"},
+            { "id": 42, "type": "Implied Periodic Return", "method": "implied_periodic_return"},
+            { "id": 43, "type": "Equity Instruments", "method": "none", "children": [
+                { "id": 431, "type": "Implied Return", "method": "tvm_implied_return"},
+                { "id": 432, "type": "Implied Growth", "method": "tvm_implied_growth"}
+            ]}
+        ]
+    },
+    {
+        "id": 5,
+        "type": "Yield",
+        "method": "None",
+        "children": [
+            { "id": 51, "type": "EAR", "method": "effective_annual_rate"}
+        ]
+    },
+    {
+        "id": 98,
+        "type": "Equity Data",
+        "method": "none",
+        "children": [
+            { "id": 981, "type": "Holding Period Return", "method": "ibkr_holding_period_return"}
+        ]
+    },
+    {
+        "id": 99,
+        "type": "schema",
+        "method": "schema"
+    }
+]

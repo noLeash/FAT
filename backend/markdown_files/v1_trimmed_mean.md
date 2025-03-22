@@ -1,0 +1,1 @@
+A trimmed mean is a mean calculated after removing a defined percentage of the largest and smallest values before calculating the mean.

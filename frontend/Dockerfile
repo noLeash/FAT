@@ -2,21 +2,16 @@ FROM node:18
 
 WORKDIR /app
 
-# Copy package files first for caching
-COPY package.json package-lock.json ./
+# Accept build-time variable
+ARG NODE_ENV
+ENV NODE_ENV=${NODE_ENV}
 
-# Install dependencies
+# Install deps
+COPY package.json package-lock.json ./
 RUN npm install
 
-# Copy everything else
+# Copy rest of app
 COPY . .
 
-# Set environment variables
-ENV NODE_ENV=false
-ENV PORT=3000
-
-# Expose port for Vite
 EXPOSE 3000
-
-# Start Vite Dev Server
 CMD ["npm", "run", "dev"]

@@ -1,6 +1,7 @@
 # General
 .DS_Store
 Thumbs.db
+zip_project.py
 
 # Python
 __pycache__/

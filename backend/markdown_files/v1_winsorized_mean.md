@@ -1,0 +1,1 @@
+The winsorized mean is a mean that has had outlier values replaced with their nearest observations

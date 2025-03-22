@@ -3,8 +3,10 @@ from fastapi import FastAPI, UploadFile, File, HTTPException
 from routes import functions_routes, methods_routes
 from typing import Optional, List
 from pydantic import BaseModel, Field
+from utils.logger import setup_logging
 
 app = FastAPI()
+logger = setup_logging()
 
 # Include function-related and market data routes
 app.include_router(functions_routes.router, prefix="/functions")

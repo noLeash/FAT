@@ -1,0 +1,1 @@
+$_r$ = Real risk-free interest rate + Inflation premium + Default risk premium + Liquidity premium + Maturity premium. (1)

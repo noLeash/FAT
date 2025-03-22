@@ -1,0 +1,11 @@
+@use "@/styles/variables" as vars;
+
+.math_card {
+    // background-color: aquamarine;
+    width: 50vw;
+    font-size: 3px;
+    padding: 50px !important;
+    &__title {
+        background-color: blue;
+    }
+}
